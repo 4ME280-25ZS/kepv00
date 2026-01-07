@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 1000" role="img" aria-labelledby="title desc">
+  <title id="title">Cinematic cameraman placeholder</title>
+  <desc id="desc">Stylized cinematic illustration of a cameraman filming on set with camera and tripod, neutral colors.</desc>
+  <defs>
+    <linearGradient id="g" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0" stop-color="#eef2ff"/>
+      <stop offset="1" stop-color="#f8fafc"/>
+    </linearGradient>
+    <linearGradient id="g2" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0" stop-color="#cbd5e1"/>
+      <stop offset="1" stop-color="#94a3b8"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Background subtle gradient -->
+  <rect width="1600" height="1000" fill="url(#g)"/>
+
+  <!-- Soft vignette -->
+  <radialGradient id="v" cx="50%" cy="40%" r="80%">
+    <stop offset="0" stop-color="rgba(0,0,0,0)"/>
+    <stop offset="1" stop-color="rgba(0,0,0,0.06)"/>
+  </radialGradient>
+  <rect width="1600" height="1000" fill="url(#v)"/>
+
+  <!-- Camera body -->
+  <g transform="translate(200,220)">
+    <rect x="0" y="120" width="760" height="340" rx="20" fill="#0f1720" opacity="0.92"/>
+    <rect x="36" y="160" width="220" height="120" rx="8" fill="#111827"/>
+    <circle cx="520" cy="290" r="110" fill="#111827"/>
+    <circle cx="520" cy="290" r="72" fill="#0b1223"/>
+    <circle cx="520" cy="290" r="28" fill="#2563eb"/>
+  </g>
+
+  <!-- Tripod -->
+  <g transform="translate(180,480)" fill="#1f2937">
+    <rect x="270" y="0" width="16" height="220" rx="8"/>
+    <rect x="120" y="60" width="12" height="260" rx="6" transform="rotate(-18 126 190)"/>
+    <rect x="420" y="60" width="12" height="260" rx="6" transform="rotate(18 426 190)"/>
+  </g>
+
+  <!-- Cameraman silhouette (simple, iconic) -->
+  <g transform="translate(980,220) scale(0.9)">
+    <ellipse cx="70" cy="80" rx="56" ry="66" fill="#0b1223"/>
+    <rect x="14" y="130" width="112" height="160" rx="28" fill="#0b1223"/>
+    <path d="M-10 160c40 24 120 24 160 0v28c-40 30-120 30-160 0z" fill="#111827" opacity="0.95"/>
+    <rect x="-6" y="220" width="60" height="18" rx="6" fill="#111827"/>
+  </g>
+
+  <!-- Accent film strip / frame edge -->
+  <g transform="translate(120,120)" opacity="0.85">
+    <rect x="0" y="0" width="920" height="560" fill="none" stroke="url(#g2)" stroke-width="6" rx="18"/>
+    <g fill="#fff" opacity="0.12">
+      <rect x="8" y="18" width="14" height="34"/>
+      <rect x="40" y="18" width="14" height="34"/>
+      <rect x="72" y="18" width="14" height="34"/>
+    </g>
+  </g>
+
+  <!-- Subtle ground shadow -->
+  <ellipse cx="900" cy="820" rx="420" ry="40" fill="rgba(15,23,32,0.06)"/>
+</svg>

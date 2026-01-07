@@ -1,54 +1,117 @@
-# Personal Business Card — Static Site
+# Pepa Švenkr — Portfolio & Wishlist
 
-This repository contains a minimal, accessible personal website built with plain HTML, CSS, and a small amount of vanilla JavaScript. It's ready to publish via GitHub Pages from the repository root.
+This repository contains two projects:
 
-Files
-- `index.html` — root page (edit placeholders here: name, role, bio, email, social links).
-- `styles.css` — site styles and CSS variables for quick customization.
-- `script.js` — small script for smooth scrolling and mobile nav toggle.
+1. **Gift Wishlist** (root) — A live, public gift wishlist with Firebase Firestore integration
+2. **Business Card** (subfolder) — A personal business card website
 
-Quick start
+## Project Structure
 
-Open `index.html` directly in a browser, or serve locally for correct URL handling:
+```
+kepv00/
+├── index.html              # Wishlist app (main page)
+├── styles.css              # Wishlist styles
+├── script.js               # Wishlist logic
+├── firebase-config.js      # Firebase configuration (you fill in)
+├── README.md               # This file
+└── business-card/          # Personal business card
+    ├── index.html
+    ├── styles.css
+    ├── script.js
+    ├── README.md
+    └── assets/
+        └── hero.svg
+```
+
+## Gift Wishlist (Root)
+
+### Features
+- View gifts with descriptions, prices, and links
+- Reserve gifts by entering your name
+- Cancel reservations (name verification)
+- Real-time updates across all visitors via Firebase Firestore
+- Responsive mobile-first design
+- Fully accessible
+
+### Setup
+
+1. **Create a Firebase project** at [console.firebase.google.com](https://console.firebase.google.com)
+2. **Enable Firestore Database** (test mode)
+3. **Get your config keys** from Project Settings → Web app
+4. **Fill in `firebase-config.js`** with your Firebase credentials
+5. **Create a Firestore collection** named `gifts` with sample documents:
+   ```json
+   {
+     "title": "PlayStation 5",
+     "description": "Latest gaming console",
+     "url": "https://example.com",
+     "price": "$499",
+     "reservedBy": null,
+     "reservedAt": null
+   }
+   ```
+
+### Running locally
 
 ```bash
-# from the project root
 python3 -m http.server 8000
-# then visit http://localhost:8000
+# Open http://localhost:8000/
 ```
 
-Customizing content
-- Edit `index.html` to replace placeholder text:
-  - Your name and role in the hero heading
-  - The short bio in the About section
-  - Email address and social links in the Contact section
+## Business Card (Subfolder)
 
-Styling
-- Edit CSS variables at the top of `styles.css` to change colors, radius, and fonts.
+A professional business card for Pepa Švenkr, a professional cameraman.
 
-Accessibility
-- Semantic HTML is used throughout.
-- Focusable controls and skip link are included.
-- Respect `prefers-reduced-motion`.
+### Features
+- Clean, modern design
+- Responsive layout
+- Hero section with image
+- About, Skills, and Contact sections
+- Smooth navigation
+- Fully accessible
 
-Publishing to GitHub Pages (root)
-
-1. Create a new repository on GitHub and push this project to the repository root (no subfolder required).
+### Running locally
 
 ```bash
-git init
-git add .
-git commit -m "Initial personal business-card site"
-git remote add origin git@github.com:YOUR-USERNAME/YOUR-REPO.git
-git push -u origin main
+python3 -m http.server 8000
+# Open http://localhost:8000/business-card/
 ```
 
-2. In your repository settings on GitHub, under "Pages", choose the branch `main` (or `master`) and the root `/` folder as the source. Save. Your site will be available at `https://YOUR-USERNAME.github.io/YOUR-REPO/` shortly.
+See [business-card/README.md](business-card/README.md) for more details.
 
-Notes
-- This project contains no build tools or dependencies; drop-in static site ready for GitHub Pages.
-- For a custom font, add a `link` to a webfont in the head of `index.html` and update `--font-sans` in `styles.css`.
+## Deployment to GitHub Pages
 
+1. Push to GitHub:
+   ```bash
+   git push origin main
+   ```
+
+2. In GitHub Settings → Pages:
+   - Select `main` branch
+   - Select `/` (root) folder
+   - Save
+
+3. Your site will be live at:
+   - Wishlist: `https://username.github.io/kepv00/`
+   - Business Card: `https://username.github.io/kepv00/business-card/`
+
+## Notes
+
+- **Firestore Security**: Before sharing widely, update Firestore rules to restrict access
+- **No Build Tools**: Both projects use pure HTML/CSS/JavaScript + Firebase SDK
+- **Mobile-First**: Fully responsive on all devices
+- **Accessibility**: Semantic HTML, ARIA labels, keyboard navigation
+
+## Files to Customize
+
+- `index.html` (root) — Header, footer, modal text
+- `firebase-config.js` — Your Firebase credentials
+- `business-card/index.html` — Name, bio, skills, contact details
+- `business-card/assets/hero.svg` — Replace with your photo
+
+## Browser Support
+
+Modern browsers (Chrome, Firefox, Safari, Edge) with ES6 support required.
 ## Publikace na GitHub Pages
 
 Krátký návod, jak publikovat tento repozitář pomocí GitHub Pages:
