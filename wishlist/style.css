@@ -1,0 +1,26 @@
+/* Simple, clean styles for the wishlist app */
+:root{
+  --bg:#fafafa;
+  --card:#ffffff;
+  --muted:#666;
+  --accent:#0b76ef;
+  --border:#e6e6e6;
+}
+*{box-sizing:border-box}
+body{font-family:system-ui,-apple-system,Segoe UI,Roboto,'Helvetica Neue',Arial;line-height:1.4;margin:0;background:var(--bg);color:#111}
+.site-header{padding:2rem 1rem;text-align:center}
+.lead{color:var(--muted);margin-top:.25rem}
+main{max-width:800px;margin:0 auto;padding:0 1rem 3rem}
+.gift-list{list-style:none;padding:0;margin:0;display:grid;grid-template-columns:1fr;gap:1rem}
+.gift{background:var(--card);border:1px solid var(--border);padding:1rem;border-radius:8px;display:flex;flex-direction:column}
+.gift h3{margin:0 0 .25rem 0;font-size:1.1rem}
+.gift p{margin:0 0 .5rem 0;color:var(--muted)}
+button{background:var(--accent);color:white;border:none;padding:.5rem .75rem;border-radius:6px;cursor:pointer}
+button:hover{opacity:.95}
+.reserved{font-weight:600;color:#222}
+.site-footer{text-align:center;padding:1rem;color:var(--muted);font-size:.9rem}
+.visually-hidden{position:absolute!important;height:1px;width:1px;overflow:hidden;clip:rect(1px,1px,1px,1px);white-space:nowrap}
+
+@media(min-width:600px){
+  .gift-list{grid-template-columns:repeat(2,1fr)}
+}
