@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Gift Wishlist</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="site-header">
+    <h1>Wishlist</h1>
+    <p class="lead">Mrkněte dole na seznam a kliknutím se zapište u dárků.</p>
+  </header>
+
+  <main>
+    <section aria-labelledby="list-heading">
+      <h2 id="list-heading" class="visually-hidden">Gifts</h2>
+      <ul id="gifts" class="gift-list" aria-live="polite"></ul>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <small></small>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2/dist/umd/supabase.min.js"></script>
+  <script src="supabase-config.js"></script>
+  <script src="db.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
